@@ -1,18 +1,164 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio — Iris Ye</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+    :root {
+      --cream: #F7F4EE;
+      --ink: #1A1814;
+      --ink-muted: #6B6660;
+      --accent: #C9A96E;
+      --border: rgba(26,24,20,0.12);
+    }
+ 
+    body {
+      background-color: var(--cream);
+      color: var(--ink);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 1.5rem 4rem;
+    }
+ 
+    header {
+      width: 100%;
+      max-width: 1000px;
+      padding: 3.5rem 0 2.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      border-bottom: 0.5px solid var(--border);
+      margin-bottom: 3rem;
+    }
+ 
+    .eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 11px;
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+ 
+    h1 {
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 300;
+      letter-spacing: -0.01em;
+      line-height: 1.05;
+      color: var(--ink);
+    }
+ 
+    h1 em {
+      font-style: italic;
+      font-weight: 300;
+    }
+ 
+    .subtitle {
+      margin-top: 0.75rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 300;
+      letter-spacing: 0.06em;
+      color: var(--ink-muted);
+    }
+ 
+    .presentation-wrapper {
+      width: 100%;
+      max-width: 1000px;
+      position: relative;
+    }
+ 
+    .frame-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+ 
+    .frame-label::after {
+      content: '';
+      flex: 1;
+      height: 0.5px;
+      background: var(--border);
+    }
+ 
+    .iframe-container {
+      width: 100%;
+      aspect-ratio: 960 / 569;
+      border: 0.5px solid var(--border);
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 2px 40px rgba(26,24,20,0.06), 0 1px 4px rgba(26,24,20,0.04);
+    }
+ 
+    .iframe-container iframe {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border: none;
+    }
+ 
+    footer {
+      width: 100%;
+      max-width: 1000px;
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 0.5px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+ 
+    footer span {
+      font-family: 'DM Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: var(--ink-muted);
+    }
+ 
+    .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: inline-block;
+    }
+  </style>
 </head>
 <body>
-    <h1>Portfolio — Iris Ye</h1>
-    <iframe 
-        src="https://docs.google.com/presentation/d/e/2PACX-1vTkuXNCvJ8k3UwT8WSekCqRo5vt2I9vHaiUfvMmJxlnGPKD973FOCe_tr2S1ChHQos4hY_sQCihzk_N/pubembed?start=false&loop=false&delayms=3000" 
-        frameborder="0" 
-        width="960" 
-        height="569" 
-        allowfullscreen="true" 
-        mozallowfullscreen="true" 
-        webkitallowfullscreen="true">
-    </iframe>
+ 
+  <header>
+    <span class="eyebrow">Selected work</span>
+    <h1>Iris Ye</h1>
+    <p class="subtitle">Electrical and Computer Engineering &ensp;·&ensp;Portfolio</p>
+  </header>
+ 
+  <div class="presentation-wrapper">
+    <div class="iframe-container">
+      <iframe
+        src="https://docs.google.com/presentation/d/e/2PACX-1vTkuXNCvJ8k3UwT8WSekCqRo5vt2I9vHaiUfvMmJxlnGPKD973FOCe_tr2S1ChHQos4hY_sQCihzk_N/pubembed?start=false&loop=false&delayms=3000"
+        allowfullscreen
+        mozallowfullscreen
+        webkitallowfullscreen>
+      </iframe>
+    </div>
+  </div>
+ 
+  <footer>
+  </footer>
+ 
 </body>
 </html>
